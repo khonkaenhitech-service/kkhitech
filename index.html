@@ -2,8 +2,8 @@
 <html lang="th">
 <head>
 <meta charset="utf-8">
-<title>ขอนแก่นไฮเทค | ระบบเครื่องซักผ้าหยอดเหรียญ อีสานตอนบน</title>
-<meta name="description" content="ขอนแก่นไฮเทค ผู้เชี่ยวชาญระบบเครื่องซักผ้าหยอดเหรียญ ครบทุกอำเภอขอนแก่น และอีสานตอนบน ตรวจหน้างานจริง แก้จบ ไม่เสียซ้ำ">
+<title>ขอนแก่นไฮเทค | ระบบหยอดเหรียญ & แฟรนไชส์ อีสานตอนบน</title>
+<meta name="description" content="ขอนแก่นไฮเทค ผู้เชี่ยวชาญระบบหยอดเหรียญและแฟรนไชส์ เครื่องซักผ้าหยอดเหรียญ ตู้น้ำ ตู้น้ำมัน คาร์แคร์ ล้างรถ ครบวงจร ขอนแก่นและอีสานตอนบน">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <style>
@@ -15,7 +15,6 @@
   --text:#eaeaea;
   --muted:#b5b5b5;
 }
-
 *{box-sizing:border-box;margin:0;padding:0}
 body{
   font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Tahoma;
@@ -23,70 +22,31 @@ body{
   color:var(--text);
   line-height:1.8;
 }
-
 a{color:#ffb3b3;text-decoration:none;font-weight:700}
 a:hover{color:#fff}
-
-main{
-  max-width:1200px;
-  margin:auto;
-  padding:60px 20px;
-}
-
-section{
-  margin-bottom:80px;
-}
-
-h1,h2,h3{
-  line-height:1.3;
-}
-
-h1{
-  font-size:2.6rem;
-  margin-bottom:20px;
-}
-
-h2{
-  font-size:1.9rem;
-  margin-bottom:18px;
-  color:#ff8080;
-}
-
-p{
-  color:var(--muted);
-  margin-bottom:14px;
-  font-size:1.05rem;
-}
+main{max-width:1200px;margin:auto;padding:60px 20px}
+section{margin-bottom:90px}
+h1,h2,h3{line-height:1.3}
+h1{font-size:2.6rem;margin-bottom:20px}
+h2{font-size:2rem;margin-bottom:18px;color:#ff8080}
+h3{margin-bottom:10px;color:#ffb3b3}
+p{color:var(--muted);margin-bottom:14px;font-size:1.05rem}
 
 .hero{
   text-align:center;
-  padding:100px 20px;
+  padding:110px 20px;
   background:radial-gradient(circle at top,#1a1a2a,#000);
 }
-
-.hero h1{
-  font-size:3rem;
-}
-
-.hero strong{
-  color:#ff4d4d;
-}
-
-.hero p{
-  max-width:800px;
-  margin:20px auto 30px;
-}
-
+.hero strong{color:#ff4d4d}
 .cta{
   display:inline-block;
   background:linear-gradient(135deg,var(--accent),var(--accent2));
   color:#fff;
-  padding:16px 30px;
+  padding:16px 32px;
   border-radius:10px;
-  font-size:1.1rem;
+  font-size:1.15rem;
   box-shadow:0 0 40px rgba(255,0,0,.35);
 }
-
 .alert{
   background:#190000;
   border-left:6px solid var(--accent);
@@ -96,28 +56,20 @@ p{
   font-weight:700;
   color:#ffd6d6;
 }
-
 .grid{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-  gap:16px;
+  gap:18px;
 }
-
 .card{
   background:#14141d;
-  padding:18px;
-  border-radius:10px;
+  padding:20px;
+  border-radius:12px;
   border:1px solid #1f1f2a;
 }
+.card:hover{border-color:#ff4d4d}
 
-.card:hover{
-  border-color:#ff4d4d;
-}
-
-ul{
-  list-style:none;
-}
-
+ul{list-style:none}
 ul li::before{
   content:"▸";
   color:#ff4d4d;
@@ -134,11 +86,7 @@ ul li::before{
   border-radius:999px;
   box-shadow:0 0 25px rgba(255,0,0,.35);
 }
-
-.sticky a{
-  margin:0 10px;
-  color:#ff8080;
-}
+.sticky a{margin:0 10px;color:#ff8080}
 
 @media(max-width:768px){
   h1{font-size:2.2rem}
@@ -152,18 +100,7 @@ ul li::before{
   "@context":"https://schema.org",
   "@type":"BreadcrumbList",
   "itemListElement":[
-    {
-      "@type":"ListItem",
-      "position":1,
-      "name":"หน้าแรก",
-      "item":"https://khonkaenhitech-service.github.io/kkhitech/"
-    },
-    {
-      "@type":"ListItem",
-      "position":2,
-      "name":"อีสานตอนบน",
-      "item":"https://khonkaenhitech-service.github.io/kkhitech/"
-    }
+    {"@type":"ListItem","position":1,"name":"หน้าแรก","item":"https://khonkaenhitech-service.github.io/kkhitech/"}
   ]
 }
 </script>
@@ -173,70 +110,91 @@ ul li::before{
 <body>
 
 <div class="hero">
-  <h1>คุณกำลังเลือก<br><strong>ทีมที่แก้จบ</strong> หรือ <strong>ทีมที่ทำให้เสียซ้ำ</strong></h1>
+  <h1>
+    ธุรกิจหยอดเหรียญ & แฟรนไชส์<br>
+    <strong>เลือกผิด = เสียซ้ำ</strong>
+  </h1>
   <p>
-    ขอนแก่นไฮเทค คือผู้เชี่ยวชาญระบบเครื่องซักผ้าหยอดเหรียญ  
-    ครอบคลุม <strong>ขอนแก่น และอีสานตอนบน</strong>  
-    เราไม่รับทุกงาน แต่รับเฉพาะงานที่ “ทำแล้วต้องจบ”
+    ขอนแก่นไฮเทค คือทีมที่ออกแบบ <strong>ระบบให้ทำเงินได้จริง</strong><br>
+    ไม่ใช่แค่ขายเครื่อง แต่ขาย “ความเสถียรระยะยาว”
   </p>
-  <a class="cta" href="tel:0944749874">โทรปรึกษาทันที 094-474-9874</a>
+  <a class="cta" href="tel:0944749874">โทรปรึกษา 094-474-9874</a>
 </div>
 
 <main>
 
 <section>
   <div class="alert">
-    ลูกค้าส่วนใหญ่ที่มาหาเรา  
-    เคยเสียเงินกับการเลือกผิดมาก่อน  
-    และไม่อยากเสียซ้ำเป็นครั้งที่สอง
+    ธุรกิจล้มเหลวไม่ใช่เพราะทำเล  
+    แต่เพราะวางระบบผิดตั้งแต่วันแรก
   </div>
 </section>
 
 <section>
-  <h2>พื้นที่ให้บริการ อีสานตอนบน</h2>
+  <h2>บริการระบบหยอดเหรียญครบวงจร</h2>
   <div class="grid">
-    <div class="card">ขอนแก่น</div>
-    <div class="card">อุดรธานี</div>
-    <div class="card">กาฬสินธุ์</div>
-    <div class="card">มหาสารคาม</div>
-    <div class="card">หนองบัวลำภู</div>
-    <div class="card">เลย</div>
-    <div class="card">ร้อยเอ็ด</div>
-    <div class="card">สกลนคร</div>
-    <div class="card">นครพนม</div>
-    <div class="card">บึงกาฬ</div>
+    <div class="card">
+      <h3>เครื่องซักผ้าหยอดเหรียญ</h3>
+      <p>ขาย ติดตั้ง และรับซ่อม วางระบบร้านซักผ้าให้ทำงานต่อเนื่อง ไม่พังซ้ำ</p>
+    </div>
+    <div class="card">
+      <h3>ตู้น้ำหยอดเหรียญ</h3>
+      <p>ระบบ RO / น้ำดื่ม เน้นความสะอาด เสถียร เปิดขายได้ทุกวัน</p>
+    </div>
+    <div class="card">
+      <h3>ตู้น้ำมันหยอดเหรียญ</h3>
+      <p>ปรับระบบจ่ายแม่น ลดปัญหาขาดทุนจากความคลาดเคลื่อน</p>
+    </div>
+    <div class="card">
+      <h3>ระบบคาร์แคร์หยอดเหรียญ</h3>
+      <p>วางระบบล้างรถหยอดเหรียญ ตั้งแต่ระบบน้ำ ไฟ ไปจนถึงการใช้งานจริง</p>
+    </div>
   </div>
 </section>
 
 <section>
-  <h2>อำเภอที่ให้บริการในจังหวัดขอนแก่น</h2>
+  <h2>ระบบแฟรนไชส์ ทำเงินแบบมีแบบแผน</h2>
   <div class="grid">
-    <a class="card" href="cases/อำเภอเมือง-ขอนแก่น.html">อำเภอเมือง</a>
-    <a class="card" href="cases/บ้านไผ่-ขอนแก่น.html">บ้านไผ่</a>
-    <a class="card" href="cases/ชุมแพ-ขอนแก่น.html">ชุมแพ</a>
-    <a class="card" href="cases/พล-ขอนแก่น.html">พล</a>
-    <a class="card" href="cases/น้ำพอง-ขอนแก่น.html">น้ำพอง</a>
-    <a class="card" href="cases/หนองเรือ-ขอนแก่น.html">หนองเรือ</a>
-    <a class="card" href="cases/ภูเวียง-ขอนแก่น.html">ภูเวียง</a>
-    <a class="card" href="cases/ชนบท-ขอนแก่น.html">ชนบท</a>
-    <a class="card" href="cases/มัญจาคีรี-ขอนแก่น.html">มัญจาคีรี</a>
-    <a class="card" href="cases/บ้านฝาง-ขอนแก่น.html">บ้านฝาง</a>
+
+    <div class="card">
+      <h3>แฟรนไชส์เครื่องซักผ้าหยอดเหรียญ</h3>
+      <p>
+        วางระบบร้านซักผ้าแบบพร้อมเปิด  
+        คำนวณต้นทุน–คืนทุน–กำไร  
+        เหมาะสำหรับผู้เริ่มต้นและนักลงทุน
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>แฟรนไชส์คาร์แคร์ ล้างรถ</h3>
+      <p>
+        ระบบล้างรถหยอดเหรียญแบบอัตโนมัติ  
+        ใช้แรงงานน้อย ดูแลง่าย  
+        เหมาะกับทำเลชุมชนและปั๊มน้ำมัน
+      </p>
+    </div>
+
+  </div>
+
+  <div class="alert">
+    แฟรนไชส์ที่ดี  
+    ต้องทำให้คุณ <strong>ไม่ต้องเฝ้าร้านตลอดชีวิต</strong>
   </div>
 </section>
 
 <section>
-  <h2>ทำไมลูกค้าเลือกเรา</h2>
+  <h2>ทำไมต้องขอนแก่นไฮเทค</h2>
   <ul>
-    <li>เราอธิบายความเสี่ยงก่อนขาย</li>
-    <li>เราไม่เร่งงาน ไม่ทิ้งงาน</li>
-    <li>เราแก้ระบบ ไม่ใช่แค่แก้อาการ</li>
-    <li>เราเลือกงาน เพื่อคุณภาพระยะยาว</li>
+    <li>เราออกแบบระบบก่อนขาย ไม่ขายของลอย ๆ</li>
+    <li>รับงานจำกัด เพื่อคุณภาพ</li>
+    <li>คิดเผื่อการซ่อมและขยายในอนาคต</li>
+    <li>เหมาะกับคนที่ต้องการ “ทำเงินระยะยาว”</li>
   </ul>
 </section>
 
 <section style="text-align:center">
-  <h2>ถ้าคุณไม่อยากเสียซ้ำ</h2>
-  <a class="cta" href="tel:0944749874">โทรตอนนี้ เพื่อจองคิวตรวจหน้างาน</a>
+  <h2>ถ้าคุณจริงจังกับธุรกิจ</h2>
+  <a class="cta" href="tel:0944749874">โทรคุยกับทีมงานโดยตรง</a>
 </section>
 
 </main>
