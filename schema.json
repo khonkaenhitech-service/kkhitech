@@ -1,0 +1,39 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "LocalBusiness",
+      "name": "ขอนแก่นไฮเทค",
+      "telephone": "+66944749874",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "39/7 ซอยศรีจันทร์ 27 ตำบลในเมือง อำเภอเมืองขอนแก่น ขอนแก่น 40000",
+        "addressLocality": "ขอนแก่น",
+        "addressCountry": "TH"
+      },
+      "sameAs": [
+        "https://www.facebook.com/Line0944749874/",
+        "https://line.me/ti/p/~KKHITECH",
+        "https://maps.app.goo.gl/JTiJUhBErbRYWkCR8"
+      ]
+    },
+    {
+      "@type": "Service",
+      "name": "เครื่องซักผ้าหยอดเหรียญ",
+      "areaServed": "ขอนแก่น"
+    },
+    {
+      "@type": "Review",
+      "author": {
+        "@type": "Person",
+        "name": "ลูกค้าจริง ขอนแก่น"
+      },
+      "reviewBody": "แก้ปัญหาเครื่องซักผ้าหยอดเหรียญได้จบครั้งเดียว",
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      }
+    }
+  ]
+}
