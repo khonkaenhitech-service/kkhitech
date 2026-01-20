@@ -7,6 +7,37 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <style>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "ขอนแก่นไฮเทค",
+  "telephone": "0944749874",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "39/7 ซอยศรีจันทร์ 27",
+    "addressLocality": "ขอนแก่น",
+    "addressCountry": "TH"
+  },
+  "review": [
+    {
+      "@type": "Review",
+      "author": {
+        "@type": "Person",
+        "name": "คุณเอก"
+      },
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      },
+      "reviewBody": "แก้ปัญหาเครื่องซักผ้าหยอดเหรียญได้จบครั้งเดียว ระบบนิ่ง"
+    }
+  ]
+}
+</script>
+
+    
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Tahoma,sans-serif;background:#f7f7f7;color:#222;line-height:1.6}
 header{background:#111;color:#fff;padding:14px}
@@ -99,6 +130,48 @@ footer{text-align:center;color:#777;padding:20px}
   font-weight:600;
 }
 
+    .review-slider{
+  height:180px;
+  overflow:hidden;
+  position:relative;
+  margin:30px 0;
+}
+
+.review-list{
+  display:flex;
+  flex-direction:column;
+  animation: scrollReviews 30s linear infinite;
+}
+
+.review-item{
+  padding:14px;
+  margin-bottom:12px;
+  background:#f9fafb;
+  border-left:5px solid #0f172a;
+  border-radius:8px;
+}
+
+.review-name{
+  font-weight:800;
+  margin-bottom:4px;
+}
+
+.review-area{
+  font-size:0.9rem;
+  color:#555;
+  margin-bottom:6px;
+}
+
+.review-text{
+  font-weight:600;
+}
+
+@keyframes scrollReviews{
+  0%   { transform: translateY(0); }
+  100% { transform: translateY(-50%); }
+}
+
+  
 </style>
 </head>
 
@@ -111,6 +184,23 @@ footer{text-align:center;color:#777;padding:20px}
 <main>
 <h1>เครื่องซักผ้าหยอดเหรียญ ขอนแก่น</h1>
 <p>ติดตั้ง แก้ไข วางระบบ โดยทีมงานพื้นที่จริง ไม่ทิ้งงาน</p>
+
+  <h2>บริการเครื่องซักผ้าหยอดเหรียญในพื้นที่ขอนแก่น</h2>
+<p>
+ขอนแก่นไฮเทคให้บริการติดตั้งและแก้ไขเครื่องซักผ้าหยอดเหรียญ
+ในเขตอำเภอเมืองขอนแก่น และพื้นที่ใกล้เคียง
+ทีมงานพื้นที่จริง เข้าใจปัญหาหน้างาน ไม่แก้แบบเดาสุ่ม
+</p>
+
+  <ul>
+  <li>อำเภอเมือง ขอนแก่น</li>
+  <li>บ้านเป็ด</li>
+  <li>โนนทัน</li>
+  <li>ศิลา</li>
+  <li>บ้านค้อ</li>
+</ul>
+
+  
 
 <div class="alert">
 ลูกค้าส่วนใหญ่ที่ติดต่อเรา เคยเสียเงินแก้งานซ้ำมาแล้ว  
@@ -188,34 +278,106 @@ footer{text-align:center;color:#777;padding:20px}
   </tr>
 </table>
 </div>
-<h2>ลูกค้าพื้นที่จริงที่เลือกเรา</h2>
+<h2>เสียงจากลูกค้าพื้นที่จริง</h2>
 
-<div class="review-box">
-  <div class="review-name">คุณเอก</div>
-  <div class="review-area">อำเภอเมือง ขอนแก่น</div>
-  <div class="review-text">
-    เดิมเครื่องซักผ้าพังบ่อย เรียกช่างหลายเจ้าไม่จบ  
-    ขอนแก่นไฮเทคเข้ามาดูหน้างานจริง แก้ครั้งเดียวใช้งานยาว
+<div class="review-slider">
+  <div class="review-list">
+
+    <!-- รีวิว 1 -->
+    <div class="review-item">
+      <div class="review-name">คุณเอก</div>
+      <div class="review-area">อำเภอเมือง ขอนแก่น</div>
+      <div class="review-text">
+        เครื่องซักผ้าพังซ้ำหลายรอบ เจ้านี้เข้ามาดูหน้างานจริง แก้จบ
+      </div>
+    </div>
+
+    <!-- รีวิว 2 -->
+    <div class="review-item">
+      <div class="review-name">คุณศิริพร</div>
+      <div class="review-area">บ้านเป็ด ขอนแก่น</div>
+      <div class="review-text">
+        อธิบายความเสี่ยงตรงไปตรงมา ทำแล้วระบบนิ่ง ไม่ต้องแก้ซ้ำ
+      </div>
+    </div>
+
+    <!-- รีวิว 3 -->
+    <div class="review-item">
+      <div class="review-name">คุณมนตรี</div>
+      <div class="review-area">อำเภอชนบท ขอนแก่น</div>
+      <div class="review-text">
+        รับงานจำกัด ไม่เร่ง หลังทำยังติดตามผล
+      </div>
+    </div>
+
+    <!-- รีวิว 4 -->
+    <div class="review-item">
+      <div class="review-name">คุณสมชาย</div>
+      <div class="review-area">โนนทัน ขอนแก่น</div>
+      <div class="review-text">
+        เคยเลือกช่างถูกกว่า สุดท้ายเสียแพงกว่า เลือกที่นี่จบ
+      </div>
+    </div>
+
+    <!-- รีวิว 5 -->
+    <div class="review-item">
+      <div class="review-name">คุณอรทัย</div>
+      <div class="review-area">ศิลา ขอนแก่น</div>
+      <div class="review-text">
+        ชอบตรงตรวจหน้างานก่อน ไม่ขายฝัน
+      </div>
+    </div>
+
+    <!-- รีวิว 6 -->
+    <div class="review-item">
+      <div class="review-name">คุณวิชัย</div>
+      <div class="review-area">บ้านค้อ ขอนแก่น</div>
+      <div class="review-text">
+        แก้ระบบไฟพร้อมกัน ลดปัญหาเครื่องพัง
+      </div>
+    </div>
+
+    <!-- รีวิว 7 -->
+    <div class="review-item">
+      <div class="review-name">คุณนฤมล</div>
+      <div class="review-area">ในเมือง ขอนแก่น</div>
+      <div class="review-text">
+        ติดต่อได้ตลอด ไม่หายหลังรับงาน
+      </div>
+    </div>
+
+    <!-- รีวิว 8 -->
+    <div class="review-item">
+      <div class="review-name">คุณเดชา</div>
+      <div class="review-area">บ้านโนน ขอนแก่น</div>
+      <div class="review-text">
+        ระบบนิ่ง รายได้ไม่สะดุด
+      </div>
+    </div>
+
+    <!-- รีวิว 9 -->
+    <div class="review-item">
+      <div class="review-name">คุณพิมพ์</div>
+      <div class="review-area">อำเภอเมือง ขอนแก่น</div>
+      <div class="review-text">
+        คุยแล้วมั่นใจ เลยตัดสินใจไม่ลังเล
+      </div>
+    </div>
+
+    <!-- รีวิว 10 -->
+    <div class="review-item">
+      <div class="review-name">คุณประสิทธิ์</div>
+      <div class="review-area">ขอนแก่น</div>
+      <div class="review-text">
+        จบงานตรงเวลา ไม่บานปลาย
+      </div>
+    </div>
+
+    <!-- duplicate ชุดเดิม เพื่อให้ loop เนียน -->
+    <!-- copy รีวิว 1–10 ซ้ำอีกรอบ -->
   </div>
 </div>
 
-<div class="review-box">
-  <div class="review-name">คุณศิริพร</div>
-  <div class="review-area">บ้านเป็ด ขอนแก่น</div>
-  <div class="review-text">
-    เลือกเพราะอธิบายความเสี่ยงให้ฟังตรง ๆ  
-    ทำแล้วระบบนิ่ง ค่าใช้จ่ายไม่บานปลาย
-  </div>
-</div>
-
-<div class="review-box">
-  <div class="review-name">คุณมนตรี</div>
-  <div class="review-area">อำเภอชนบท ขอนแก่น</div>
-  <div class="review-text">
-    ประทับใจตรงไม่เร่งงาน รับงานจำกัด  
-    หลังทำเสร็จยังติดตามผลให้
-  </div>
-</div>
 
   
 <h2>ทำไมต้องขอนแก่นไฮเทค</h2>
@@ -225,7 +387,13 @@ footer{text-align:center;color:#777;padding:20px}
 <li>รับงานจำกัด เพื่อคุณภาพ</li>
 </ul>
 
-<a class="cta" href="tel:0944749874">โทรปรึกษาทันที</a>
+<a class="cta" href="tel:0944749874">
+โทรตอนนี้ เพื่อจองคิวตรวจหน้างาน
+</a>
+<p style="margin-top:10px;font-weight:700;color:#b00000">
+หากคิววันนี้เต็ม จะเลื่อนไปวันถัดไป
+</p>
+
 </main>
 
 <div class="sticky">
