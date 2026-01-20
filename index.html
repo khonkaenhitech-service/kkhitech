@@ -2,414 +2,249 @@
 <html lang="th">
 <head>
 <meta charset="utf-8">
-<title>เครื่องซักผ้าหยอดเหรียญ ขอนแก่น | ขอนแก่นไฮเทค</title>
-<meta name="description" content="เครื่องซักผ้าหยอดเหรียญ ขอนแก่น ติดตั้ง แก้ไข ระบบครบวงจร ไม่เสียซ้ำ โทร 0944749874">
+<title>ขอนแก่นไฮเทค | ระบบเครื่องซักผ้าหยอดเหรียญ อีสานตอนบน</title>
+<meta name="description" content="ขอนแก่นไฮเทค ผู้เชี่ยวชาญระบบเครื่องซักผ้าหยอดเหรียญ ครบทุกอำเภอขอนแก่น และอีสานตอนบน ตรวจหน้างานจริง แก้จบ ไม่เสียซ้ำ">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <style>
-  <script type="application/ld+json">
+:root{
+  --dark:#0b0b0f;
+  --dark2:#12121a;
+  --accent:#b30000;
+  --accent2:#ff2e2e;
+  --text:#eaeaea;
+  --muted:#b5b5b5;
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Tahoma;
+  background:linear-gradient(180deg,var(--dark),var(--dark2));
+  color:var(--text);
+  line-height:1.8;
+}
+
+a{color:#ffb3b3;text-decoration:none;font-weight:700}
+a:hover{color:#fff}
+
+main{
+  max-width:1200px;
+  margin:auto;
+  padding:60px 20px;
+}
+
+section{
+  margin-bottom:80px;
+}
+
+h1,h2,h3{
+  line-height:1.3;
+}
+
+h1{
+  font-size:2.6rem;
+  margin-bottom:20px;
+}
+
+h2{
+  font-size:1.9rem;
+  margin-bottom:18px;
+  color:#ff8080;
+}
+
+p{
+  color:var(--muted);
+  margin-bottom:14px;
+  font-size:1.05rem;
+}
+
+.hero{
+  text-align:center;
+  padding:100px 20px;
+  background:radial-gradient(circle at top,#1a1a2a,#000);
+}
+
+.hero h1{
+  font-size:3rem;
+}
+
+.hero strong{
+  color:#ff4d4d;
+}
+
+.hero p{
+  max-width:800px;
+  margin:20px auto 30px;
+}
+
+.cta{
+  display:inline-block;
+  background:linear-gradient(135deg,var(--accent),var(--accent2));
+  color:#fff;
+  padding:16px 30px;
+  border-radius:10px;
+  font-size:1.1rem;
+  box-shadow:0 0 40px rgba(255,0,0,.35);
+}
+
+.alert{
+  background:#190000;
+  border-left:6px solid var(--accent);
+  padding:20px;
+  margin:30px auto;
+  max-width:900px;
+  font-weight:700;
+  color:#ffd6d6;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:16px;
+}
+
+.card{
+  background:#14141d;
+  padding:18px;
+  border-radius:10px;
+  border:1px solid #1f1f2a;
+}
+
+.card:hover{
+  border-color:#ff4d4d;
+}
+
+ul{
+  list-style:none;
+}
+
+ul li::before{
+  content:"▸";
+  color:#ff4d4d;
+  margin-right:8px;
+}
+
+.sticky{
+  position:fixed;
+  bottom:20px;
+  left:50%;
+  transform:translateX(-50%);
+  background:#000;
+  padding:12px 24px;
+  border-radius:999px;
+  box-shadow:0 0 25px rgba(255,0,0,.35);
+}
+
+.sticky a{
+  margin:0 10px;
+  color:#ff8080;
+}
+
+@media(max-width:768px){
+  h1{font-size:2.2rem}
+  h2{font-size:1.6rem}
+}
+</style>
+
+<!-- Breadcrumb Schema -->
+<script type="application/ld+json">
 {
-  "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "name": "ขอนแก่นไฮเทค",
-  "telephone": "0944749874",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "39/7 ซอยศรีจันทร์ 27",
-    "addressLocality": "ขอนแก่น",
-    "addressCountry": "TH"
-  },
-  "review": [
+  "@context":"https://schema.org",
+  "@type":"BreadcrumbList",
+  "itemListElement":[
     {
-      "@type": "Review",
-      "author": {
-        "@type": "Person",
-        "name": "คุณเอก"
-      },
-      "reviewRating": {
-        "@type": "Rating",
-        "ratingValue": "5",
-        "bestRating": "5"
-      },
-      "reviewBody": "แก้ปัญหาเครื่องซักผ้าหยอดเหรียญได้จบครั้งเดียว ระบบนิ่ง"
+      "@type":"ListItem",
+      "position":1,
+      "name":"หน้าแรก",
+      "item":"https://khonkaenhitech-service.github.io/kkhitech/"
+    },
+    {
+      "@type":"ListItem",
+      "position":2,
+      "name":"อีสานตอนบน",
+      "item":"https://khonkaenhitech-service.github.io/kkhitech/"
     }
   ]
 }
 </script>
 
-    
-*{box-sizing:border-box;margin:0;padding:0}
-body{font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Tahoma,sans-serif;background:#f7f7f7;color:#222;line-height:1.6}
-header{background:#111;color:#fff;padding:14px}
-main{max-width:900px;margin:30px auto;background:#fff;padding:30px;border-radius:10px}
-h1{font-size:2rem;margin-bottom:10px}
-h2{color:#b00000;margin-top:25px}
-.alert{background:#ffe9e9;border-left:6px solid #b00000;padding:14px;margin:20px 0;font-weight:700}
-.cta{display:inline-block;margin-top:15px;background:#b00000;color:#fff;padding:12px 20px;border-radius:6px;text-decoration:none;font-weight:700}
-.sticky{position:fixed;bottom:15px;left:50%;transform:translateX(-50%);background:#111;padding:10px 18px;border-radius:999px}
-.sticky a{color:#ffcc00;text-decoration:none;font-weight:700;margin:0 10px}
-footer{text-align:center;color:#777;padding:20px}
-  .scarcity-box{
-  background:#fff4f4;
-  border:2px dashed #b00000;
-  padding:16px;
-  border-radius:10px;
-  margin:25px 0;
-}
-.scarcity-title{
-  color:#b00000;
-  font-weight:800;
-  font-size:1.1rem;
-  margin-bottom:8px;
-}
-.scarcity-text{
-  font-weight:600;
-}
-.scarcity-count{
-  display:inline-block;
-  background:#b00000;
-  color:#fff;
-  padding:4px 10px;
-  border-radius:999px;
-  font-weight:800;
-  margin:0 6px;
-}
-
-  .compare-table{
-  width:100%;
-  border-collapse:collapse;
-  margin:30px 0;
-  font-size:0.95rem;
-}
-.compare-table th,
-.compare-table td{
-  border:1px solid #ddd;
-  padding:12px;
-  vertical-align:top;
-}
-.compare-table th{
-  background:#111;
-  color:#fff;
-  text-align:center;
-}
-.compare-table td:first-child{
-  font-weight:700;
-}
-.compare-good{
-  background:#f1fdf5;
-}
-.compare-bad{
-  background:#fff5f5;
-}
-.compare-check{
-  color:#0a7a2f;
-  font-weight:800;
-}
-.compare-cross{
-  color:#b00000;
-  font-weight:800;
-}
-
-  .review-box{
-  background:#f9fafb;
-  border-left:5px solid #0f172a;
-  padding:16px;
-  margin:18px 0;
-  border-radius:8px;
-}
-.review-name{
-  font-weight:800;
-  margin-bottom:4px;
-}
-.review-area{
-  color:#555;
-  font-size:0.9rem;
-  margin-bottom:8px;
-}
-.review-text{
-  font-weight:600;
-}
-
-    .review-slider{
-  height:180px;
-  overflow:hidden;
-  position:relative;
-  margin:30px 0;
-}
-
-.review-list{
-  display:flex;
-  flex-direction:column;
-  animation: scrollReviews 30s linear infinite;
-}
-
-.review-item{
-  padding:14px;
-  margin-bottom:12px;
-  background:#f9fafb;
-  border-left:5px solid #0f172a;
-  border-radius:8px;
-}
-
-.review-name{
-  font-weight:800;
-  margin-bottom:4px;
-}
-
-.review-area{
-  font-size:0.9rem;
-  color:#555;
-  margin-bottom:6px;
-}
-
-.review-text{
-  font-weight:600;
-}
-
-@keyframes scrollReviews{
-  0%   { transform: translateY(0); }
-  100% { transform: translateY(-50%); }
-}
-
-    /* หยุดเลื่อนเมื่อชี้เมาส์ */
-.review-slider:hover .review-list{
-  animation-play-state: paused;
-}
-
-  
-</style>
 </head>
 
 <body>
 
-<header>
-<strong>ขอนแก่นไฮเทค</strong> | โทร 094-474-9874
-</header>
+<div class="hero">
+  <h1>คุณกำลังเลือก<br><strong>ทีมที่แก้จบ</strong> หรือ <strong>ทีมที่ทำให้เสียซ้ำ</strong></h1>
+  <p>
+    ขอนแก่นไฮเทค คือผู้เชี่ยวชาญระบบเครื่องซักผ้าหยอดเหรียญ  
+    ครอบคลุม <strong>ขอนแก่น และอีสานตอนบน</strong>  
+    เราไม่รับทุกงาน แต่รับเฉพาะงานที่ “ทำแล้วต้องจบ”
+  </p>
+  <a class="cta" href="tel:0944749874">โทรปรึกษาทันที 094-474-9874</a>
+</div>
 
 <main>
-<h1>เครื่องซักผ้าหยอดเหรียญ ขอนแก่น</h1>
-<p>ติดตั้ง แก้ไข วางระบบ โดยทีมงานพื้นที่จริง ไม่ทิ้งงาน</p>
 
-  <h2>บริการเครื่องซักผ้าหยอดเหรียญในพื้นที่ขอนแก่น</h2>
-<p>
-ขอนแก่นไฮเทคให้บริการติดตั้งและแก้ไขเครื่องซักผ้าหยอดเหรียญ
-ในเขตอำเภอเมืองขอนแก่น และพื้นที่ใกล้เคียง
-ทีมงานพื้นที่จริง เข้าใจปัญหาหน้างาน ไม่แก้แบบเดาสุ่ม
-</p>
+<section>
+  <div class="alert">
+    ลูกค้าส่วนใหญ่ที่มาหาเรา  
+    เคยเสียเงินกับการเลือกผิดมาก่อน  
+    และไม่อยากเสียซ้ำเป็นครั้งที่สอง
+  </div>
+</section>
 
+<section>
+  <h2>พื้นที่ให้บริการ อีสานตอนบน</h2>
+  <div class="grid">
+    <div class="card">ขอนแก่น</div>
+    <div class="card">อุดรธานี</div>
+    <div class="card">กาฬสินธุ์</div>
+    <div class="card">มหาสารคาม</div>
+    <div class="card">หนองบัวลำภู</div>
+    <div class="card">เลย</div>
+    <div class="card">ร้อยเอ็ด</div>
+    <div class="card">สกลนคร</div>
+    <div class="card">นครพนม</div>
+    <div class="card">บึงกาฬ</div>
+  </div>
+</section>
+
+<section>
+  <h2>อำเภอที่ให้บริการในจังหวัดขอนแก่น</h2>
+  <div class="grid">
+    <a class="card" href="cases/อำเภอเมือง-ขอนแก่น.html">อำเภอเมือง</a>
+    <a class="card" href="cases/บ้านไผ่-ขอนแก่น.html">บ้านไผ่</a>
+    <a class="card" href="cases/ชุมแพ-ขอนแก่น.html">ชุมแพ</a>
+    <a class="card" href="cases/พล-ขอนแก่น.html">พล</a>
+    <a class="card" href="cases/น้ำพอง-ขอนแก่น.html">น้ำพอง</a>
+    <a class="card" href="cases/หนองเรือ-ขอนแก่น.html">หนองเรือ</a>
+    <a class="card" href="cases/ภูเวียง-ขอนแก่น.html">ภูเวียง</a>
+    <a class="card" href="cases/ชนบท-ขอนแก่น.html">ชนบท</a>
+    <a class="card" href="cases/มัญจาคีรี-ขอนแก่น.html">มัญจาคีรี</a>
+    <a class="card" href="cases/บ้านฝาง-ขอนแก่น.html">บ้านฝาง</a>
+  </div>
+</section>
+
+<section>
+  <h2>ทำไมลูกค้าเลือกเรา</h2>
   <ul>
-  <li>อำเภอเมือง ขอนแก่น</li>
-  <li>บ้านเป็ด</li>
-  <li>โนนทัน</li>
-  <li>ศิลา</li>
-  <li>บ้านค้อ</li>
-</ul>
+    <li>เราอธิบายความเสี่ยงก่อนขาย</li>
+    <li>เราไม่เร่งงาน ไม่ทิ้งงาน</li>
+    <li>เราแก้ระบบ ไม่ใช่แค่แก้อาการ</li>
+    <li>เราเลือกงาน เพื่อคุณภาพระยะยาว</li>
+  </ul>
+</section>
 
-  
-
-<div class="alert">
-ลูกค้าส่วนใหญ่ที่ติดต่อเรา เคยเสียเงินแก้งานซ้ำมาแล้ว  
-เพราะเลือกช่างผิดตั้งแต่ครั้งแรก
-</div>
-<div class="scarcity-box">
-  <div class="scarcity-title">
-    ⚠️ รับงานจำกัดต่อวัน เพื่อคุณภาพงาน
-  </div>
-  <div class="scarcity-text">
-    ทีมงานขอนแก่นไฮเทครับงานวันละไม่เกิน
-    <span class="scarcity-count">5 เคส</span>
-    เท่านั้น  
-    เพื่อให้ตรวจหน้างานและแก้ปัญหาได้จบจริง ไม่เร่ง ไม่ทิ้งงาน
-    
-  </div>
-
-  <h2>เลือกให้ถูกตั้งแต่ครั้งแรก</h2>
-
-<table class="compare-table">
-  <tr>
-    <th>หัวข้อ</th>
-    <th>ขอนแก่นไฮเทค</th>
-    <th>ช่างทั่วไป</th>
-  </tr>
-
-  <tr>
-    <td>การประเมินหน้างาน</td>
-    <td class="compare-good">
-      <span class="compare-check">✔</span> ตรวจหน้างานจริงก่อนทำ
-    </td>
-    <td class="compare-bad">
-      <span class="compare-cross">✖</span> ประเมินจากรูปหรือคำบอก
-    </td>
-  </tr>
-
-  <tr>
-    <td>แนวทางแก้ปัญหา</td>
-    <td class="compare-good">
-      <span class="compare-check">✔</span> วางระบบให้เหมาะกับพื้นที่
-    </td>
-    <td class="compare-bad">
-      <span class="compare-cross">✖</span> แก้เฉพาะหน้า
-    </td>
-  </tr>
-
-  <tr>
-    <td>ความเสี่ยงพังซ้ำ</td>
-    <td class="compare-good">
-      <span class="compare-check">✔</span> ลดความเสี่ยงในระยะยาว
-    </td>
-    <td class="compare-bad">
-      <span class="compare-cross">✖</span> มีโอกาสเสียซ้ำ
-    </td>
-  </tr>
-
-  <tr>
-    <td>ความรับผิดชอบหลังงาน</td>
-    <td class="compare-good">
-      <span class="compare-check">✔</span> ติดต่อได้ มีการติดตามงาน
-    </td>
-    <td class="compare-bad">
-      <span class="compare-cross">✖</span> มักติดต่อยากหลังจบงาน
-    </td>
-  </tr>
-
-  <tr>
-    <td>ค่าใช้จ่ายระยะยาว</td>
-    <td class="compare-good">
-      <span class="compare-check">✔</span> จบครั้งเดียว ไม่เสียซ้ำ
-    </td>
-    <td class="compare-bad">
-      <span class="compare-cross">✖</span> ค่าแก้งานสะสมสูงกว่า
-    </td>
-  </tr>
-</table>
-</div>
-<h2>เสียงจากลูกค้าพื้นที่จริง</h2>
-
-  
-<div class="review-slider">
-  <div class="review-list">
-
-    <!-- รีวิว 1 -->
-    <div class="review-item">
-      <div class="review-name">คุณเอก</div>
-      <div class="review-area">อำเภอเมือง ขอนแก่น</div>
-      <div class="review-text">
-        เครื่องซักผ้าพังซ้ำหลายรอบ เจ้านี้เข้ามาดูหน้างานจริง แก้จบ
-      </div>
-    </div>
-
-    <!-- รีวิว 2 -->
-    <div class="review-item">
-      <div class="review-name">คุณศิริพร</div>
-      <div class="review-area">บ้านเป็ด ขอนแก่น</div>
-      <div class="review-text">
-        อธิบายความเสี่ยงตรงไปตรงมา ทำแล้วระบบนิ่ง ไม่ต้องแก้ซ้ำ
-      </div>
-    </div>
-
-    <!-- รีวิว 3 -->
-    <div class="review-item">
-      <div class="review-name">คุณมนตรี</div>
-      <div class="review-area">อำเภอชนบท ขอนแก่น</div>
-      <div class="review-text">
-        รับงานจำกัด ไม่เร่ง หลังทำยังติดตามผล
-      </div>
-    </div>
-
-    <!-- รีวิว 4 -->
-    <div class="review-item">
-      <div class="review-name">คุณสมชาย</div>
-      <div class="review-area">โนนทัน ขอนแก่น</div>
-      <div class="review-text">
-        เคยเลือกช่างถูกกว่า สุดท้ายเสียแพงกว่า เลือกที่นี่จบ
-      </div>
-    </div>
-
-    <!-- รีวิว 5 -->
-    <div class="review-item">
-      <div class="review-name">คุณอรทัย</div>
-      <div class="review-area">ศิลา ขอนแก่น</div>
-      <div class="review-text">
-        ชอบตรงตรวจหน้างานก่อน ไม่ขายฝัน
-      </div>
-    </div>
-
-    <!-- รีวิว 6 -->
-    <div class="review-item">
-      <div class="review-name">คุณวิชัย</div>
-      <div class="review-area">บ้านค้อ ขอนแก่น</div>
-      <div class="review-text">
-        แก้ระบบไฟพร้อมกัน ลดปัญหาเครื่องพัง
-      </div>
-    </div>
-
-    <!-- รีวิว 7 -->
-    <div class="review-item">
-      <div class="review-name">คุณนฤมล</div>
-      <div class="review-area">ในเมือง ขอนแก่น</div>
-      <div class="review-text">
-        ติดต่อได้ตลอด ไม่หายหลังรับงาน
-      </div>
-    </div>
-
-    <!-- รีวิว 8 -->
-    <div class="review-item">
-      <div class="review-name">คุณเดชา</div>
-      <div class="review-area">บ้านโนน ขอนแก่น</div>
-      <div class="review-text">
-        ระบบนิ่ง รายได้ไม่สะดุด
-      </div>
-    </div>
-
-    <!-- รีวิว 9 -->
-    <div class="review-item">
-      <div class="review-name">คุณพิมพ์</div>
-      <div class="review-area">อำเภอเมือง ขอนแก่น</div>
-      <div class="review-text">
-        คุยแล้วมั่นใจ เลยตัดสินใจไม่ลังเล
-      </div>
-    </div>
-
-    <!-- รีวิว 10 -->
-    <div class="review-item">
-      <div class="review-name">คุณประสิทธิ์</div>
-      <div class="review-area">ขอนแก่น</div>
-      <div class="review-text">
-        จบงานตรงเวลา ไม่บานปลาย
-      </div>
-    </div>
-
-    <!-- duplicate ชุดเดิม เพื่อให้ loop เนียน -->
-    <!-- copy รีวิว 1–10 ซ้ำอีกรอบ -->
-  </div>
-</div>
-
-
-  
-<h2>ทำไมต้องขอนแก่นไฮเทค</h2>
-<ul>
-<li>ประเมินหน้างานจริงก่อนติดตั้ง</li>
-<li>วางระบบให้เหมาะกับพื้นที่</li>
-<li>รับงานจำกัด เพื่อคุณภาพ</li>
-</ul>
-
-<a class="cta" href="tel:0944749874">
-โทรตอนนี้ เพื่อจองคิวตรวจหน้างาน
-</a>
-<p style="margin-top:10px;font-weight:700;color:#b00000">
-หากคิววันนี้เต็ม จะเลื่อนไปวันถัดไป
-</p>
+<section style="text-align:center">
+  <h2>ถ้าคุณไม่อยากเสียซ้ำ</h2>
+  <a class="cta" href="tel:0944749874">โทรตอนนี้ เพื่อจองคิวตรวจหน้างาน</a>
+</section>
 
 </main>
 
 <div class="sticky">
-<a href="tel:0944749874">โทร</a>
-<a href="https://line.me/ti/p/~KKHITECH">LINE</a>
+  <a href="tel:0944749874">📞 โทร</a>
+  <a href="https://line.me/ti/p/~KKHITECH">💬 LINE</a>
 </div>
-
-<footer>
-© ขอนแก่นไฮเทค
-</footer>
 
 </body>
 </html>
