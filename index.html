@@ -82,7 +82,7 @@ a{color:#ffb3b3;font-weight:700;text-decoration:none}
 
 /* SCARCITY */
 .scarcity{
-  position:absolute; top:-8px; left:-8px;
+  position:absolute; top:-55px; left:-8px;
   background:#ff3b3b; color:#fff; font-size:11px; font-weight:700;
   padding:4px 8px; border-radius:999px; box-shadow:0 6px 16px rgba(0,0,0,.4);
 }
@@ -145,7 +145,7 @@ a{color:#ffb3b3;font-weight:700;text-decoration:none}
   });
 
   /* 3) Scarcity (สุ่มวันละ X เคส) */
-  const cap = 3 + Math.floor(Math.random()*3); // 3–5
+  const cap = 3 + Math.floor(Math.random()*4); // 3–5
   const badge=document.createElement('span');
   badge.className='scarcity';
   badge.textContent=`รับงานวันละ ${cap} เคส`;
