@@ -34,145 +34,147 @@ a{color:#ffb3b3;font-weight:700;text-decoration:none}
 <p>สำหรับผู้ต้องการสร้างรายได้ระยะยาว ไม่แข่งราคา</p>
 <a href="franchise-investor.html">ดูรายละเอียดแฟรนไชส์</a>
 
-<a class="sticky" href="https://line.me/ti/p/~KKHITECH">LINE ปรึกษาทันที</a>
-
-
-<!-- ================= UNIFIED FLOATING ACTION HUB ================= -->
+<!-- ================= UNIFIED FLOATING HUB : BOOST MODE ================= -->
 <style>
-:root {
-  --fab-size: 58px;
-  --fab-gap: 12px;
+:root{
+  --fab:58px; --gap:12px;
+  --red:#c40000; --green:#00b36b; --blue:#1976d2; --brown:#6d4c41;
 }
 
-/* HUB หลัก */
-.fab-hub {
-  position: fixed;
-  right: 16px;
-  bottom: calc(env(safe-area-inset-bottom, 20px) + 16px);
-  z-index: 9999;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  gap: var(--fab-gap);
+/* HUB */
+.fab-hub{
+  position:fixed; right:16px;
+  bottom:calc(env(safe-area-inset-bottom,20px) + 16px);
+  z-index:9999; display:flex; flex-direction:column; align-items:flex-end; gap:var(--gap);
 }
 
-/* ปุ่มหลัก (เปิด/ปิดเมนู) */
-.fab-main {
-  width: var(--fab-size);
-  height: var(--fab-size);
-  border-radius: 50%;
-  background: linear-gradient(135deg,#8b0000,#c40000);
-  color: #fff;
-  border: none;
-  font-size: 22px;
-  box-shadow: 0 8px 24px rgba(0,0,0,.45);
-  cursor: pointer;
+/* MAIN */
+.fab-main{
+  width:var(--fab); height:var(--fab); border-radius:50%;
+  background:linear-gradient(135deg,#8b0000,var(--red));
+  color:#fff; border:0; font-size:22px; cursor:pointer;
+  box-shadow:0 10px 28px rgba(0,0,0,.45);
 }
 
-/* กล่องเมนู */
-.fab-menu {
-  display: none;
-  flex-direction: column;
-  gap: var(--fab-gap);
+/* MENU */
+.fab-menu{display:none; flex-direction:column; gap:var(--gap);}
+.fab-hub.open .fab-menu{display:flex;}
+
+/* BTN */
+.fab-btn{
+  width:var(--fab); height:var(--fab); border-radius:50%;
+  color:#fff; text-decoration:none; font-size:22px;
+  display:flex; align-items:center; justify-content:center;
+  box-shadow:0 8px 22px rgba(0,0,0,.4);
+}
+.fab-phone{background:linear-gradient(135deg,#8b0000,var(--red));}
+.fab-line{background:linear-gradient(135deg,#006400,var(--green));}
+.fab-fb{background:linear-gradient(135deg,#0d47a1,var(--blue));}
+.fab-map{background:linear-gradient(135deg,#4e342e,var(--brown));}
+
+/* LABEL */
+.fab-wrap{position:relative}
+.fab-label{
+  position:absolute; right:calc(var(--fab) + 10px);
+  background:rgba(0,0,0,.75); color:#fff;
+  padding:6px 10px; border-radius:8px; font-size:12px; white-space:nowrap;
 }
 
-/* ปุ่มย่อย */
-.fab-btn {
-  width: var(--fab-size);
-  height: var(--fab-size);
-  border-radius: 50%;
-  color: #fff;
-  text-decoration: none;
-  font-size: 22px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 6px 20px rgba(0,0,0,.4);
+/* SCARCITY */
+.scarcity{
+  position:absolute; top:-8px; left:-8px;
+  background:#ff3b3b; color:#fff; font-size:11px; font-weight:700;
+  padding:4px 8px; border-radius:999px; box-shadow:0 6px 16px rgba(0,0,0,.4);
 }
 
-/* สีแต่ละปุ่ม */
-.fab-phone { background: linear-gradient(135deg,#8b0000,#c40000); }
-.fab-line  { background: linear-gradient(135deg,#006400,#00b36b); }
-.fab-fb    { background: linear-gradient(135deg,#0d47a1,#1976d2); }
-.fab-map   { background: linear-gradient(135deg,#4e342e,#6d4c41); }
-
-/* Label (อ่านง่ายบนมือถือ) */
-.fab-label {
-  position: absolute;
-  right: calc(var(--fab-size) + 10px);
-  background: rgba(0,0,0,.75);
-  color: #fff;
-  padding: 6px 10px;
-  border-radius: 8px;
-  font-size: 12px;
-  white-space: nowrap;
-}
-
-/* แสดงเมนู */
-.fab-hub.open .fab-menu {
-  display: flex;
-}
-
-/* แตะง่ายบนมือถือ */
-.fab-btn:active,
-.fab-main:active {
-  transform: scale(.92);
+/* NUDGE */
+.nudge{
+  position:fixed; right:16px; bottom:calc(env(safe-area-inset-bottom,20px) + 88px);
+  background:#14141d; color:#fff; font-size:12px;
+  padding:8px 10px; border-radius:10px; box-shadow:0 8px 20px rgba(0,0,0,.45);
+  display:none;
 }
 </style>
 
 <div class="fab-hub" id="fabHub">
+  <div class="fab-menu" id="fabMenu">
 
-  <!-- เมนูย่อย -->
-  <div class="fab-menu">
-
-    <div style="position:relative">
+    <div class="fab-wrap">
       <span class="fab-label">โทรทันที</span>
-      <a href="tel:0944749874" class="fab-btn fab-phone">📞</a>
+      <a href="tel:0944749874" class="fab-btn fab-phone" data-act="phone">📞</a>
     </div>
 
-    <div style="position:relative">
+    <div class="fab-wrap">
       <span class="fab-label">LINE ปรึกษา</span>
-      <a href="https://line.me/ti/p/~KKHITECH" target="_blank" class="fab-btn fab-line">💬</a>
+      <a href="https://line.me/ti/p/~KKHITECH" target="_blank" class="fab-btn fab-line" data-act="line">💬</a>
     </div>
 
-    <div style="position:relative">
+    <div class="fab-wrap">
       <span class="fab-label">Facebook</span>
-      <a href="https://www.facebook.com/Line0944749874/" target="_blank" class="fab-btn fab-fb">📘</a>
+      <a href="https://www.facebook.com/Line0944749874/" target="_blank" class="fab-btn fab-fb" data-act="fb">📘</a>
     </div>
 
-    <div style="position:relative">
+    <div class="fab-wrap">
       <span class="fab-label">Google Maps</span>
-      <a href="https://maps.app.goo.gl/JTiJUhBErbRYWkCR8" target="_blank" class="fab-btn fab-map">📍</a>
+      <a href="https://maps.app.goo.gl/JTiJUhBErbRYWkCR8" target="_blank" class="fab-btn fab-map" data-act="map">📍</a>
     </div>
 
   </div>
 
-  <!-- ปุ่มหลัก -->
   <button class="fab-main" id="fabToggle">☎</button>
 </div>
 
+<div class="nudge" id="fabNudge">รับงานจำกัดต่อวัน • ตรวจหน้างานก่อนตัดสินใจ</div>
+
 <script>
-/* ================= FAB TOGGLE ================= */
-(function () {
-  const hub = document.getElementById('fabHub');
-  const toggle = document.getElementById('fabToggle');
+/* ================= BOOST LOGIC ================= */
+(function(){
+  const hub=document.getElementById('fabHub');
+  const menu=document.getElementById('fabMenu');
+  const toggle=document.getElementById('fabToggle');
+  const nudge=document.getElementById('fabNudge');
 
-  if (!hub || !toggle) return;
+  if(!hub||!menu||!toggle) return;
 
-  toggle.addEventListener('click', function () {
-    hub.classList.toggle('open');
+  /* 1) Toggle */
+  toggle.addEventListener('click',()=>hub.classList.toggle('open'));
+
+  /* 2) Auto-close on scroll (mobile UX) */
+  let last=0; window.addEventListener('scroll',()=>{
+    const y=scrollY; if(y>last) hub.classList.remove('open'); last=y;
   });
 
-  // ปิดอัตโนมัติเมื่อสกรอล (UX มือถือ)
-  let lastScroll = 0;
-  window.addEventListener('scroll', function () {
-    const curr = window.scrollY;
-    if (curr > lastScroll) hub.classList.remove('open');
-    lastScroll = curr;
+  /* 3) Scarcity (สุ่มวันละ X เคส) */
+  const cap = 3 + Math.floor(Math.random()*3); // 3–5
+  const badge=document.createElement('span');
+  badge.className='scarcity';
+  badge.textContent=`รับงานวันละ ${cap} เคส`;
+  toggle.parentElement.appendChild(badge);
+
+  /* 4) Page-aware (หน้าแฟรนไชส์/ลงทุน → ดัน LINE) */
+  const isFranchise = /franchise|invest/i.test(location.pathname);
+  if(isFranchise){
+    toggle.textContent='💬';
+    badge.textContent='ปรึกษานักลงทุน';
+  }
+
+  /* 5) Idle Nudge (ถ้าไม่แตะ 8 วิ) */
+  let idleTimer=setTimeout(()=>{ nudge.style.display='block'; },8000);
+  ['scroll','click','touchstart'].forEach(ev=>{
+    addEventListener(ev,()=>{ nudge.style.display='none'; clearTimeout(idleTimer); idleTimer=setTimeout(()=>{nudge.style.display='block';},8000); });
+  });
+
+  /* 6) Click Tracking (เบา ๆ ด้วย localStorage) */
+  menu.querySelectorAll('[data-act]').forEach(a=>{
+    a.addEventListener('click',()=>{
+      const k='fab_'+a.dataset.act;
+      localStorage.setItem(k,(+localStorage.getItem(k)||0)+1);
+    });
   });
 })();
 </script>
-<!-- ================= END UNIFIED FLOATING ACTION HUB ================= -->
+<!-- ================= END BOOST MODE ================= -->
+
 
 </body>
 </html>
