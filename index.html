@@ -329,7 +329,7 @@ document.getElementById('fabToggle').onclick=()=>hub.classList.toggle('open');
   });
 
   /* 3) Scarcity (สุ่มวันละ X เคส) */
-  const cap = 3 + Math.floor(Math.random()*4); // 3–5
+  const cap = 5 + Math.floor(Math.random()*5); // 3–5
   const badge=document.createElement('span');
   badge.className='scarcity';
   badge.textContent=`รับงานวันละ ${cap} เคส`;
@@ -410,6 +410,115 @@ document.getElementById('fabToggle').onclick=()=>hub.classList.toggle('open');
 
 })();
 </script>
+<!-- ================= FLOATING ACTION BUTTONS (MOBILE FIRST) ================= -->
+<style>
+/* ปุ่มลอยหลัก */
+.floating-actions {
+  position: fixed;
+  bottom: env(safe-area-inset-bottom, 20px);
+  right: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  z-index: 9999;
+}
+
+/* ปุ่มแต่ละอัน */
+.float-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 22px;
+  text-decoration: none;
+  box-shadow: 0 6px 20px rgba(0,0,0,.45);
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.float-btn:active {
+  transform: scale(0.92);
+}
+
+/* สีปุ่ม */
+.float-phone { background: linear-gradient(135deg,#8b0000,#c40000); }
+.float-line  { background: linear-gradient(135deg,#006400,#00b36b); }
+.float-fb    { background: linear-gradient(135deg,#0d47a1,#1976d2); }
+.float-map   { background: linear-gradient(135deg,#4e342e,#6d4c41); }
+
+/* ข้อความเล็กใต้ปุ่ม (เฉพาะมือถือ) */
+.float-label {
+  position: absolute;
+  right: 64px;
+  background: rgba(0,0,0,.75);
+  color: #fff;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 12px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .2s ease;
+}
+
+.float-wrap {
+  position: relative;
+}
+
+.float-wrap:hover .float-label {
+  opacity: 1;
+}
+
+/* ปรับเฉพาะ iPhone / มือถือ */
+@media (max-width: 768px) {
+  .float-label { opacity: 1; }
+}
+</style>
+
+<div class="floating-actions" id="floatingActions">
+
+  <div class="float-wrap">
+    <span class="float-label">โทรทันที</span>
+    <a href="tel:0944749874" class="float-btn float-phone">📞</a>
+  </div>
+
+  <div class="float-wrap">
+    <span class="float-label">LINE ปรึกษา</span>
+    <a href="https://line.me/ti/p/~KKHITECH" target="_blank" class="float-btn float-line">💬</a>
+  </div>
+
+  <div class="float-wrap">
+    <span class="float-label">Facebook</span>
+    <a href="https://www.facebook.com/Line0944749874/" target="_blank" class="float-btn float-fb">📘</a>
+  </div>
+
+  <div class="float-wrap">
+    <span class="float-label">นำทางร้าน</span>
+    <a href="https://maps.app.goo.gl/JTiJUhBErbRYWkCR8" target="_blank" class="float-btn float-map">📍</a>
+  </div>
+
+</div>
+
+<script>
+/* ================= SMART MOBILE RANDOM OFFSET =================
+   สุ่มตำแหน่งเล็กน้อย เพื่อดูเป็นธรรมชาติ
+   ปลอดภัยต่อ iPhone (ไม่กระทบ Safe Area)
+============================================================== */
+(function() {
+  const el = document.getElementById('floatingActions');
+  if (!el) return;
+
+  const maxOffset = 12; // px
+  const offsetX = Math.floor(Math.random() * maxOffset);
+  const offsetY = Math.floor(Math.random() * maxOffset);
+
+  el.style.right = (16 + offsetX) + 'px';
+  el.style.bottom = (20 + offsetY) + 'px';
+})();
+</script>
+<!-- ================= END FLOATING ACTION BUTTONS ================= -->
 
 </body>
 </html>
