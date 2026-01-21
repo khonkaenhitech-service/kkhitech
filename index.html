@@ -37,115 +37,142 @@ a{color:#ffb3b3;font-weight:700;text-decoration:none}
 <a class="sticky" href="https://line.me/ti/p/~KKHITECH">LINE ปรึกษาทันที</a>
 
 
-  <!-- ================= FLOATING ACTION BUTTONS (MOBILE FIRST) ================= -->
+<!-- ================= UNIFIED FLOATING ACTION HUB ================= -->
 <style>
-/* ปุ่มลอยหลัก */
-.floating-actions {
-  position: fixed;
-  bottom: env(safe-area-inset-bottom, 20px);
-  right: 16px;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  z-index: 9999;
+:root {
+  --fab-size: 58px;
+  --fab-gap: 12px;
 }
 
-/* ปุ่มแต่ละอัน */
-.float-btn {
+/* HUB หลัก */
+.fab-hub {
+  position: fixed;
+  right: 16px;
+  bottom: calc(env(safe-area-inset-bottom, 20px) + 16px);
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: var(--fab-gap);
+}
+
+/* ปุ่มหลัก (เปิด/ปิดเมนู) */
+.fab-main {
+  width: var(--fab-size);
+  height: var(--fab-size);
+  border-radius: 50%;
+  background: linear-gradient(135deg,#8b0000,#c40000);
+  color: #fff;
+  border: none;
+  font-size: 22px;
+  box-shadow: 0 8px 24px rgba(0,0,0,.45);
+  cursor: pointer;
+}
+
+/* กล่องเมนู */
+.fab-menu {
+  display: none;
+  flex-direction: column;
+  gap: var(--fab-gap);
+}
+
+/* ปุ่มย่อย */
+.fab-btn {
+  width: var(--fab-size);
+  height: var(--fab-size);
+  border-radius: 50%;
+  color: #fff;
+  text-decoration: none;
+  font-size: 22px;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 56px;
-  height: 56px;
-  border-radius: 50%;
-  color: #fff;
-  font-size: 22px;
-  text-decoration: none;
-  box-shadow: 0 6px 20px rgba(0,0,0,.45);
-  transition: transform .2s ease, box-shadow .2s ease;
+  box-shadow: 0 6px 20px rgba(0,0,0,.4);
 }
 
-.float-btn:active {
-  transform: scale(0.92);
-}
+/* สีแต่ละปุ่ม */
+.fab-phone { background: linear-gradient(135deg,#8b0000,#c40000); }
+.fab-line  { background: linear-gradient(135deg,#006400,#00b36b); }
+.fab-fb    { background: linear-gradient(135deg,#0d47a1,#1976d2); }
+.fab-map   { background: linear-gradient(135deg,#4e342e,#6d4c41); }
 
-/* สีปุ่ม */
-.float-phone { background: linear-gradient(135deg,#8b0000,#c40000); }
-.float-line  { background: linear-gradient(135deg,#006400,#00b36b); }
-.float-fb    { background: linear-gradient(135deg,#0d47a1,#1976d2); }
-.float-map   { background: linear-gradient(135deg,#4e342e,#6d4c41); }
-
-/* ข้อความเล็กใต้ปุ่ม (เฉพาะมือถือ) */
-.float-label {
+/* Label (อ่านง่ายบนมือถือ) */
+.fab-label {
   position: absolute;
-  right: 64px;
+  right: calc(var(--fab-size) + 10px);
   background: rgba(0,0,0,.75);
   color: #fff;
-  padding: 4px 8px;
-  border-radius: 6px;
+  padding: 6px 10px;
+  border-radius: 8px;
   font-size: 12px;
   white-space: nowrap;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity .2s ease;
 }
 
-.float-wrap {
-  position: relative;
+/* แสดงเมนู */
+.fab-hub.open .fab-menu {
+  display: flex;
 }
 
-.float-wrap:hover .float-label {
-  opacity: 1;
-}
-
-/* ปรับเฉพาะ iPhone / มือถือ */
-@media (max-width: 768px) {
-  .float-label { opacity: 1; }
+/* แตะง่ายบนมือถือ */
+.fab-btn:active,
+.fab-main:active {
+  transform: scale(.92);
 }
 </style>
 
-<div class="floating-actions" id="floatingActions">
+<div class="fab-hub" id="fabHub">
 
-  <div class="float-wrap">
-    <span class="float-label">โทรทันที</span>
-    <a href="tel:0944749874" class="float-btn float-phone">📞</a>
+  <!-- เมนูย่อย -->
+  <div class="fab-menu">
+
+    <div style="position:relative">
+      <span class="fab-label">โทรทันที</span>
+      <a href="tel:0944749874" class="fab-btn fab-phone">📞</a>
+    </div>
+
+    <div style="position:relative">
+      <span class="fab-label">LINE ปรึกษา</span>
+      <a href="https://line.me/ti/p/~KKHITECH" target="_blank" class="fab-btn fab-line">💬</a>
+    </div>
+
+    <div style="position:relative">
+      <span class="fab-label">Facebook</span>
+      <a href="https://www.facebook.com/Line0944749874/" target="_blank" class="fab-btn fab-fb">📘</a>
+    </div>
+
+    <div style="position:relative">
+      <span class="fab-label">Google Maps</span>
+      <a href="https://maps.app.goo.gl/JTiJUhBErbRYWkCR8" target="_blank" class="fab-btn fab-map">📍</a>
+    </div>
+
   </div>
 
-  <div class="float-wrap">
-    <span class="float-label">LINE ปรึกษา</span>
-    <a href="https://line.me/ti/p/~KKHITECH" target="_blank" class="float-btn float-line">💬</a>
-  </div>
-
-  <div class="float-wrap">
-    <span class="float-label">Facebook</span>
-    <a href="https://www.facebook.com/Line0944749874/" target="_blank" class="float-btn float-fb">📘</a>
-  </div>
-
-  <div class="float-wrap">
-    <span class="float-label">นำทางร้าน</span>
-    <a href="https://maps.app.goo.gl/JTiJUhBErbRYWkCR8" target="_blank" class="float-btn float-map">📍</a>
-  </div>
-
+  <!-- ปุ่มหลัก -->
+  <button class="fab-main" id="fabToggle">☎</button>
 </div>
 
 <script>
-/* ================= SMART MOBILE RANDOM OFFSET =================
-   สุ่มตำแหน่งเล็กน้อย เพื่อดูเป็นธรรมชาติ
-   ปลอดภัยต่อ iPhone (ไม่กระทบ Safe Area)
-============================================================== */
-(function() {
-  const el = document.getElementById('floatingActions');
-  if (!el) return;
+/* ================= FAB TOGGLE ================= */
+(function () {
+  const hub = document.getElementById('fabHub');
+  const toggle = document.getElementById('fabToggle');
 
-  const maxOffset = 12; // px
-  const offsetX = Math.floor(Math.random() * maxOffset);
-  const offsetY = Math.floor(Math.random() * maxOffset);
+  if (!hub || !toggle) return;
 
-  el.style.right = (16 + offsetX) + 'px';
-  el.style.bottom = (20 + offsetY) + 'px';
+  toggle.addEventListener('click', function () {
+    hub.classList.toggle('open');
+  });
+
+  // ปิดอัตโนมัติเมื่อสกรอล (UX มือถือ)
+  let lastScroll = 0;
+  window.addEventListener('scroll', function () {
+    const curr = window.scrollY;
+    if (curr > lastScroll) hub.classList.remove('open');
+    lastScroll = curr;
+  });
 })();
 </script>
-<!-- ================= END FLOATING ACTION BUTTONS ================= -->
+<!-- ================= END UNIFIED FLOATING ACTION HUB ================= -->
 
 </body>
 </html>
